@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .slider {
+        width: 70%;
+        overflow: hidden;
+      }
+      .slides {
+        display: flex;
+        width: 400%;
+        animation: slide 10s infinite;
+      }
+      .slides img {
+        width: 100%;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-25%);
+        }
+        45% {
+          transform: translateX(-25%);
+        }
+        50% {
+          transform: translateX(-50%);
+        }
+        70% {
+          transform: translateX(-50%);
+        }
+        75% {
+          transform: translateX(-75%);
+        }
+        95% {
+          transform: translateX(-75%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slides">
+        <img
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.PYipJ_hSncugM2SwnZitvgHaEK%26pid%3DApi&f=1&ipt=394eb380671497357e1d9edb651fd699a77363622babaa04dd3449e13b3c1939&ipo=images"
+        />
+        <img
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.aqSVE7TUcbsLCQdF_FPfRgHaEK%26pid%3DApi&f=1&ipt=c28633d5ad7be93303f646d1ba9592c31d914a8f8a2f7eaa13f5c15ebabf1673&ipo=images"
+        />
+        <img
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.whn-n7GS5FvQUbfvFUMUxQHaEo%26pid%3DApi&f=1&ipt=2cb8a850257874e4dbae922179362502ca10c0419fcbb99eb1a641fcd0d845fb&ipo=images"
+        />
+        <img
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.P8fJWbgoZs1jfbe7aaTLHQHaEK%26pid%3DApi&f=1&ipt=fde4a855139fdfb3b3f27afa56cd33817f255935f01c3c001ab0f9509e6d1147&ipo=images"
+        />
+      </div>
+    </div>
+
+    <script>
+      const slides = document.querySelector(".slides");
+      const images = document.querySelectorAll(".slides img");
+      const slideWidth = 25;
+      let currentIndex = 0;
+
+      function nextSlide() {
+        currentIndex++;
+        if (currentIndex > images.length - 1) {
+          currentIndex = 0;
+        }
+        slides.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+      }
+
+      setInterval(nextSlide, 5000);
+    </script>
+  </body>
+</html>

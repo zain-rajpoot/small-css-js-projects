@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ZAIN</title>
+        <link rel="stylesheet" href="../../USING BOOTSTRAP/getBootstrap.com/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../USING BOOTSTRAP/MDB BOOTSTRAP.com/use it/css/mdb.min.css">
+    </head>
+    <body>
+        <!-- 
+    <p id="zain"></p>
+
+    <script>
+        var d = new Date();
+        document.getElementById('zain').innerHTML = d;
+    </script>
+
+    <form action="" id="myform">
+        NAME:
+        <input type="text" id="fname"><input onclick="myform()" type="submit">
+    </form>
+
+    <script>
+        function myform() {
+            let x = document.forms['myform']['fname'].value;
+            if (x == "") {
+                alert('name must be required');
+                return false;
+            } else {
+                let y = x.toUpperCase();
+                alert('YOUR NAME IS' + " " + y)
+            }
+        }
+    </script>
+
+    <br><br><br>
+    <input id="num" type="number">
+    <br><br>
+    <div id="valid"></div>
+    <br>
+    <input type="submit" onclick="butto()">
+    <script>
+        function butto() {
+            let x = document.getElementById('num').value;
+            let text;
+            if (x = '' || x < 1 || x > 10) {
+                text = 'NOT CORRECT INPUT'
+            } else {
+                text = 'CORECCT INPUT'
+            }
+            document.getElementById('valid').innerHTML = text
+        }
+    </script>
+
+
+    <br><br><br>
+
+    Password: <input type="password" id="input"><br><br>
+    <input type="checkbox" onclick="pass()">Show it
+
+    <script>
+        function pass() {
+            var x = document.getElementById("input");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script> -->
+        <!-- <br><br><br><br>
+
+    Create a Password:
+    <input type="password" id="inp1"><br>
+    <div style="color: red;" id="zain"></div>
+    Confirm a Password:
+    <input type="password" id="inp2"><br><br>
+
+    <button onclick="walll()">
+        ZAIN
+    </button>
+    <script>
+        function walll() {
+            var x = document.getElementById('inp1');
+            var y = document.getElementById('inp2');
+            if (x.value != y.value) {
+                document.getElementById('zain').innerHTML = "Your password is not matching"
+            } else {
+                document.getElementById('zain').innerHTML = "Your password is matched."
+
+            }
+        }
+    </script> -->
+        <!-- <p id="wall"></p>
+
+    <script>
+        function zainn(x, y = 2) {
+            return x + y
+        }
+        document.getElementById("wall").innerHTML = zainn(4);
+    </script> -->
+        <!-- 
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- show image from choosen file -->
+        <div>
+            <form action="">
+                <input
+                    type="file"
+                    name="file"
+                    id="file"
+                    onchange="previewimage()"
+                    style="color: white; background-color: orange;border-radius: 10px;"
+                >
+                <br>
+                <br>
+                <img style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;"
+                src="./avatar.png" id="preveiw">
+        </form>
+    </div>
+    <script>
+        function previewimage() {
+            var file = document.getElementById('file').files;
+            if (file.length > 0) {
+                var fileReader = new FileReader();
+                console.log(fileReader);
+                // document.getElementById('preveiw').style.width = "200px"
+                // document.getElementById('preveiw').style.height = "200px"
+                // document.getElementById('preveiw').style.borderRadius = "50%"
+                fileReader.onload = function (event) {
+                    document.getElementById('preveiw').setAttribute("src", event.target.result)
+                }
+                fileReader.readAsDataURL(file[0]);
+            }
+        }
+    </script>
+    <br>
+    <br>
+    <button onclick="alll()">COPY</button>
+    <br>
+    <br>
+    <img
+        alt="zain"
+        id="image"
+        width="300px"
+        height="300px"
+        style="border-radius:50%; display: none;"
+    >
+    <script>
+        function alll() {
+            document.getElementById("image").style.display="block";
+            document.getElementById("image").src = document.getElementById("preveiw").src;
+        }
+    </script>
+</body>
+</html>
